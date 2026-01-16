@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* MEGA PACK VOLTA ÀS AULAS 2026 - Design System */
+/* Paleta: Azul/Verde Premium com toques de urgência */
+
+@layer base {
+  :root {
+    /* Core Colors - Premium Blue/Green Theme */
+    --background: 210 20% 98%;
+    --foreground: 220 25% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 25% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 25% 10%;
+
+    /* Primary - Vibrant Blue */
+    --primary: 210 100% 45%;
+    --primary-foreground: 0 0% 100%;
+    --primary-light: 210 100% 55%;
+    --primary-dark: 210 100% 35%;
+
+    /* Secondary - Fresh Green */
+    --secondary: 160 70% 40%;
+    --secondary-foreground: 0 0% 100%;
+    --secondary-light: 160 70% 50%;
+
+    /* Accent - Urgency Orange/Red */
+    --accent: 25 95% 55%;
+    --accent-foreground: 0 0% 100%;
+    --accent-hot: 0 85% 55%;
+
+    /* Success Green */
+    --success: 145 65% 42%;
+    --success-foreground: 0 0% 100%;
+
+    --muted: 210 15% 95%;
+    --muted-foreground: 220 10% 45%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 210 20% 90%;
+    --input: 210 20% 90%;
+    --ring: 210 100% 45%;
+
+    --radius: 0.75rem;
+
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(210 100% 45%) 0%, hsl(160 70% 40%) 100%);
+    --gradient-cta: linear-gradient(135deg, hsl(25 95% 55%) 0%, hsl(0 85% 55%) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(210 20% 98%) 100%);
+    --gradient-premium: linear-gradient(135deg, hsl(45 100% 50%) 0%, hsl(35 100% 55%) 100%);
+
+    /* Shadows */
+    --shadow-sm: 0 2px 8px -2px hsl(220 25% 10% / 0.08);
+    --shadow-md: 0 8px 24px -4px hsl(220 25% 10% / 0.12);
+    --shadow-lg: 0 16px 48px -8px hsl(220 25% 10% / 0.15);
+    --shadow-cta: 0 8px 32px -4px hsl(25 95% 55% / 0.4);
+    --shadow-card-hover: 0 20px 60px -12px hsl(210 100% 45% / 0.25);
+
+    /* Sidebar (keeping defaults) */
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 220 25% 8%;
+    --foreground: 210 20% 98%;
+    --card: 220 25% 12%;
+    --card-foreground: 210 20% 98%;
+    --popover: 220 25% 12%;
+    --popover-foreground: 210 20% 98%;
+    --primary: 210 100% 55%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 160 70% 45%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 220 20% 18%;
+    --muted-foreground: 210 15% 65%;
+    --accent: 25 95% 55%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 220 20% 20%;
+    --input: 220 20% 20%;
+    --ring: 210 100% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+    @apply font-bold tracking-tight;
+  }
+}
+
+@layer components {
+  /* Hero Gradient Background */
+  .hero-gradient {
+    background: var(--gradient-hero);
+  }
+
+  /* CTA Button Gradient */
+  .cta-gradient {
+    background: var(--gradient-cta);
+    box-shadow: var(--shadow-cta);
+    transition: all 0.3s ease;
+  }
+
+  .cta-gradient:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 40px -4px hsl(25 95% 55% / 0.5);
+  }
+
+  /* Premium Card */
+  .premium-card {
+    background: var(--gradient-card);
+    box-shadow: var(--shadow-md);
+    transition: all 0.3s ease;
+  }
+
+  .premium-card:hover {
+    box-shadow: var(--shadow-card-hover);
+    transform: translateY(-4px);
+  }
+
+  /* Best Seller Badge */
+  .bestseller-badge {
+    background: var(--gradient-premium);
+    animation: pulse-glow 2s ease-in-out infinite;
+  }
+
+  /* Countdown Timer */
+  .countdown-box {
+    background: hsl(0 0% 0% / 0.2);
+    backdrop-filter: blur(8px);
+  }
+
+  /* Floating Animation */
+  .float-animation {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  /* Fade In Up Animation */
+  .fade-in-up {
+    animation: fadeInUp 0.6s ease-out forwards;
+  }
+
+  /* Urgency Pulse */
+  .urgency-pulse {
+    animation: urgencyPulse 1.5s ease-in-out infinite;
+  }
+
+  /* Guarantee Seal */
+  .guarantee-seal {
+    background: linear-gradient(135deg, hsl(145 65% 42%) 0%, hsl(160 70% 40%) 100%);
+    box-shadow: 0 8px 32px -4px hsl(145 65% 42% / 0.3);
+  }
+
+  /* Testimonial Card */
+  .testimonial-card {
+    @apply bg-card rounded-2xl p-6;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid hsl(var(--border));
+  }
+}
+
+@layer utilities {
+  /* Text Gradient */
+  .text-gradient {
+    background: var(--gradient-hero);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Glass Effect */
+  .glass {
+    background: hsl(0 0% 100% / 0.1);
+    backdrop-filter: blur(12px);
+    border: 1px solid hsl(0 0% 100% / 0.2);
+  }
+
+  /* Trust Badge */
+  .trust-badge {
+    @apply inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium;
+    background: hsl(145 65% 42% / 0.1);
+    color: hsl(145 65% 42%);
+  }
+}
+
+/* Keyframe Animations */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes urgencyPulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px hsl(45 100% 50% / 0.4);
+  }
+  50% {
+    box-shadow: 0 0 30px hsl(45 100% 50% / 0.6);
+  }
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--muted));
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--primary));
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--primary-dark));
+}

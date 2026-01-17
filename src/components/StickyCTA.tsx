@@ -27,7 +27,7 @@ const StickyCTA = () => {
 
         <div className="hidden md:block">
           <p className="text-sm font-semibold text-gray-900">
-            🔥 Kit Escolar Premium 2026: <span className="text-green-600 font-bold">A partir de R$2,99</span>
+            🔥 Kit Escolar Premium 2026: <span className="text-red-600 font-bold">Últimas horas com desconto</span>
           </p>
         </div>
 
@@ -36,7 +36,7 @@ const StickyCTA = () => {
             href="#planos"
             className="flex-1 md:flex-none flex items-center justify-center gap-2 bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-bold text-sm transition-colors whitespace-nowrap"
           >
-            Garanta agora
+            Quero aproveitar agora
             <ArrowRight className="w-4 h-4" />
           </a>
 

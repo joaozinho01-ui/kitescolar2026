@@ -34,14 +34,14 @@ const SolutionSection = () => {
 
           <div className="order-1 lg:order-2">
             <span className="inline-block bg-blue-100 text-blue-700 px-4 py-1.5 rounded-full text-sm font-bold mb-6">
-              ✨ Imagine agora...
+              ✨ O segredo das mães organizadas
             </span>
             <h2 className="text-3xl md:text-5xl font-extrabold text-gray-900 mb-8 leading-tight">
-              E se você pudesse ter tudo pronto em <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">minutos?</span>
+              Resolva a lista escolar completa em <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">10 minutos.</span>
             </h2>
 
             <p className="text-xl text-gray-600 mb-10 leading-relaxed">
-              Visualize acessar uma biblioteca completa, escolher o tema que você ama, editar o nome rapidinho e... pronto! Sua impressora trabalhando enquanto você toma um café.
+              Esqueça a busca interminável no Google. Com o Kit Premium, você tem acesso imediato a uma biblioteca gigante de materiais prontos. É só escolher, editar o nome e mandar imprimir.
             </p>
 
             <ul className="space-y-5">
@@ -57,7 +57,7 @@ const SolutionSection = () => {
 
             <div className="mt-10 p-6 bg-blue-50 rounded-2xl border border-blue-100">
               <p className="text-blue-800 italic font-medium text-lg text-center">
-                "Finalmente uma solução que entende a rotina de quem não tem tempo a perder."
+                "Economizei dias de trabalho e meus filhos amaram os temas. Vale cada centavo!"
               </p>
             </div>
           </div>

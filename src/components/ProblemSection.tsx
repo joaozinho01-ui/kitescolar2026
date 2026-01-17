@@ -25,36 +25,51 @@ const problems = [
 
 const ProblemSection = () => {
   return (
-    <section className="py-20 bg-muted/30 relative overflow-hidden">
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="text-center mb-16">
-          <span className="inline-block bg-red-100 text-red-600 px-4 py-1.5 rounded-full text-sm font-bold mb-4 animate-pulse">
-            😓 Soa familiar?
-          </span>
-          <h2 className="text-3xl md:text-5xl font-extrabold text-foreground mb-6 leading-tight">
-            Criar materiais escolares não deveria ser <br className="hidden md:block" />
-            <span className="text-red-500 underline decoration-wavy underline-offset-4">um pesadelo.</span>
+    <section className="py-12 bg-gray-50">
+      <div className="container mx-auto px-4">
+
+        <div className="text-center mb-10">
+          <h2 className="text-2xl md:text-4xl font-extrabold text-gray-900 mb-4 leading-tight">
+            Cansada de gastar horas e dinheiro <br className="hidden md:block" />
+            <span className="text-red-500">com material escolar?</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Nós sabemos como é frustrante querer entregar o melhor para seus alunos ou filhos (ou clientes), mas esbarrar na falta de tempo e habilidade técnica.
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            Nós sabemos o estresse que é todo início de ano.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-          {problems.map((problem, index) => (
-            <div key={index} className="bg-white p-8 rounded-2xl shadow-sm border border-border hover:shadow-md transition-shadow">
-              <div className="flex items-start gap-6">
-                <div className="flex-shrink-0 w-14 h-14 bg-red-50 rounded-xl flex items-center justify-center text-red-500">
-                  <problem.icon className="w-7 h-7" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-foreground mb-3">{problem.title}</h3>
-                  <p className="text-muted-foreground leading-relaxed">{problem.description}</p>
-                </div>
+        <div className="max-w-3xl mx-auto bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-gray-100">
+          <ul className="space-y-4">
+            <li className="flex gap-4 items-start">
+              <div className="mt-1 min-w-[24px]">
+                <Frown className="w-6 h-6 text-red-400" />
               </div>
-            </div>
-          ))}
+              <p className="text-gray-700 font-medium leading-snug">
+                <span className="font-bold text-gray-900 block mb-1">Falta de Criatividade:</span>
+                Você tenta criar algo no computador mas sente que fica com "cara de amador".
+              </p>
+            </li>
+            <li className="flex gap-4 items-start">
+              <div className="mt-1 min-w-[24px]">
+                <Clock className="w-6 h-6 text-red-400" />
+              </div>
+              <p className="text-gray-700 font-medium leading-snug">
+                <span className="font-bold text-gray-900 block mb-1">Horas Perdidas:</span>
+                Garimpar imagens no Google que nunca combinam entre si.
+              </p>
+            </li>
+            <li className="flex gap-4 items-start">
+              <div className="mt-1 min-w-[24px]">
+                <DollarSign className="w-6 h-6 text-red-400" />
+              </div>
+              <p className="text-gray-700 font-medium leading-snug">
+                <span className="font-bold text-gray-900 block mb-1">Preço Alto:</span>
+                Pagar designer ou comprar itens personalizados prontos custa uma fortuna.
+              </p>
+            </li>
+          </ul>
         </div>
+
       </div>
     </section>
   );

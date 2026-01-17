@@ -17,48 +17,48 @@ const HeroSection = () => {
         <PromoTimer />
       </div>
 
-      <div className="container mx-auto px-4 py-12 relative z-10 pt-28">
+      <div className="container mx-auto px-4 py-8 relative z-10 pt-28">
 
 
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-8 items-center">
           {/* Left Content */}
           <div className="text-center lg:text-left">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-primary-foreground leading-tight mb-6">
-              Kit Escolar Premium 2026 — <br className="hidden lg:block" />
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-primary-foreground leading-tight mb-4">
+              Volta às aulas <br className="hidden lg:block" />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 to-yellow-500">
-                Materiais Prontos, Editáveis e Atualizados
+                SEM estresse e gastando pouco.
               </span>
             </h1>
 
             {/* Mobile Image (Visible only on mobile/tablet) */}
-            <div className="flex lg:hidden justify-center mb-8 -mt-2">
+            <div className="flex lg:hidden justify-center mb-6 -mt-2">
               <div className="relative float-animation px-4">
                 <div className="absolute inset-0 bg-primary/20 blur-3xl rounded-full transform scale-90"></div>
                 <img
                   src={mockupPremium}
                   alt="Kit Escolar Premium 2026"
-                  className="relative w-full max-w-sm rounded-2xl shadow-2xl border-4 border-white/10"
+                  className="relative w-full max-w-xs rounded-2xl shadow-2xl border-4 border-white/10"
                 />
               </div>
             </div>
 
-            <p className="text-lg sm:text-xl text-primary-foreground/90 mb-8 leading-relaxed max-w-2xl mx-auto lg:mx-0">
-              Tenha acesso a centenas de artes escolares organizadas, prontas para personalizar, imprimir ou vender, mesmo que você nunca tenha usado Canva.
+            <p className="text-lg sm:text-xl text-primary-foreground/90 mb-6 leading-relaxed max-w-2xl mx-auto lg:mx-0">
+              Tudo pronto para imprimir e personalizar. Resolva a lista de material em 10 minutos.
             </p>
 
-            {/* Micro-triggers */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8 text-primary-foreground/90 font-medium">
-              <div className="flex items-center gap-2">
-                <CheckCircle2 className="w-5 h-5 text-accent" />
-                Não precisa saber design
+            {/* Micro-triggers - Simplified */}
+            <div className="flex flex-wrap justify-center lg:justify-start gap-4 mb-8 text-primary-foreground/90 font-medium text-sm">
+              <div className="flex items-center gap-1.5">
+                <CheckCircle2 className="w-4 h-4 text-accent" />
+                Zero esforço
               </div>
-              <div className="flex items-center gap-2">
-                <Download className="w-5 h-5 text-accent" />
-                Download imediato
+              <div className="flex items-center gap-1.5">
+                <Download className="w-4 h-4 text-accent" />
+                Acesso imediato
               </div>
-              <div className="flex items-center gap-2">
-                <Zap className="w-5 h-5 text-accent" />
-                Uso pessoal ou comercial
+              <div className="flex items-center gap-1.5">
+                <Zap className="w-4 h-4 text-accent" />
+                100% Editável
               </div>
             </div>
 
@@ -66,21 +66,15 @@ const HeroSection = () => {
             <div className="flex flex-col items-center lg:items-start gap-4">
               <a
                 href="#planos"
-                className="w-full sm:w-auto inline-flex justify-center items-center gap-3 bg-yellow-400 hover:bg-yellow-500 text-indigo-950 px-8 py-5 rounded-xl text-xl font-bold transition-all hover:scale-105 shadow-[0_0_20px_rgba(250,204,21,0.5)] border-b-4 border-yellow-600"
+                className="w-full sm:w-auto inline-flex justify-center items-center gap-3 bg-yellow-400 hover:bg-yellow-500 text-indigo-950 px-8 py-4 rounded-xl text-xl font-bold transition-all hover:scale-105 shadow-[0_0_20px_rgba(250,204,21,0.5)] border-b-4 border-yellow-600"
               >
-                Garantir meu acesso agora
+                Resolver volta às aulas agora
                 <ArrowDown className="w-6 h-6 animate-bounce" />
               </a>
 
-              <div className="flex flex-col items-center lg:items-start gap-2">
-                <p className="text-primary-foreground/80 text-sm font-semibold">
-                  🔒 Pagamento Único • Acesso Vitalício
-                </p>
-                <div className="flex items-center gap-2 bg-black/20 px-4 py-2 rounded-lg backdrop-blur-sm">
-                  <span className="text-primary-foreground text-sm">A partir de</span>
-                  <span className="text-yellow-400 text-2xl font-bold">R$2,99</span>
-                </div>
-              </div>
+              <p className="text-primary-foreground/70 text-xs font-medium mt-2">
+                🔒 Compra segura • Acesso vitalício
+              </p>
             </div>
 
 

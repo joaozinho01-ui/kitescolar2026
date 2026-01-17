@@ -35,6 +35,7 @@ const HeroSection = () => {
                 <img
                   src={mockupPremium}
                   alt="Kit Escolar Premium 2026"
+                  fetchPriority="high"
                   className="relative w-full max-w-xs rounded-2xl shadow-2xl border-4 border-white/10"
                 />
               </div>
@@ -81,6 +82,7 @@ const HeroSection = () => {
               <img
                 src={mockupPremium}
                 alt="Kit Escolar Premium 2026"
+                fetchPriority="high"
                 className="relative w-full max-w-lg rounded-2xl shadow-2xl border-4 border-white/10"
               />
 

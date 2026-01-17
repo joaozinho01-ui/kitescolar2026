@@ -1,73 +1,88 @@
 import { Clock, Frown, DollarSign, BrainCircuit } from 'lucide-react';
 
-const problems = [
-  {
-    icon: Clock,
-    title: "Horas perdidas buscando inspiração",
-    description: "Você tenta criar algo do zero, mas gasta horas olhando para a tela em branco ou garimpando imagens no Google que nunca combinam."
-  },
-  {
-    icon: BrainCircuit,
-    title: "Não sabe por onde começar",
-    description: "São tantos formatos, tamanhos e ideias que você trava. Etiquetas, capas, calendários... parece impossível organizar tudo sozinha."
-  },
-  {
-    icon: Frown,
-    title: "Materiais com visual amador",
-    description: "Mesmo se esforçando, o resultado final parece 'caseiro' demais. As cores não batem, as fontes são simples e você sente vergonha de entregar ou vender."
-  },
-  {
-    icon: DollarSign,
-    title: "Gastar com designers é caro",
-    description: "Pagar alguém para fazer cada arte custa uma fortuna. E comprar templates avulsos acaba saindo caro no final das contas."
-  }
-];
-
 const ProblemSection = () => {
   return (
-    <section className="py-12 bg-gray-50">
+    <section className="py-16 bg-gray-50">
       <div className="container mx-auto px-4">
 
-        <div className="text-center mb-10">
+        <div className="text-center mb-12">
           <h2 className="text-2xl md:text-4xl font-extrabold text-gray-900 mb-4 leading-tight">
-            Cansada de gastar horas e dinheiro <br className="hidden md:block" />
-            <span className="text-red-500">com material escolar?</span>
+            Janeiro chegou. <br />
+            <span className="text-red-600">Como você está se sentindo?</span>
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Nós sabemos o estresse que é todo início de ano.
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto font-medium">
+            Seja honesta... alguma dessas situações faz parte da sua rotina agora?
           </p>
         </div>
 
-        <div className="max-w-3xl mx-auto bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-gray-100">
-          <ul className="space-y-4">
-            <li className="flex gap-4 items-start">
+        <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-6 items-stretch">
+          {/* Question 1 */}
+          <div className="bg-white p-8 rounded-2xl shadow-sm border border-red-100/50 hover:border-red-200 transition-colors group">
+            <div className="flex gap-4">
               <div className="mt-1 min-w-[24px]">
-                <Frown className="w-6 h-6 text-red-400" />
+                <BrainCircuit className="w-8 h-8 text-red-400 group-hover:scale-110 transition-transform" />
               </div>
-              <p className="text-gray-700 font-medium leading-snug">
-                <span className="font-bold text-gray-900 block mb-1">Falta de Criatividade:</span>
-                Você tenta criar algo no computador mas sente que fica com "cara de amador".
-              </p>
-            </li>
-            <li className="flex gap-4 items-start">
+              <div>
+                <h3 className="font-bold text-gray-900 text-lg mb-2">Ansiedade com a lista?</h3>
+                <p className="text-gray-600 leading-relaxed text-sm">
+                  "Tenho que comprar material, etiquetar tudo, encapar caderno... e ainda cuidar da casa e do trabalho."
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Question 2 */}
+          <div className="bg-white p-8 rounded-2xl shadow-sm border border-red-100/50 hover:border-red-200 transition-colors group">
+            <div className="flex gap-4">
               <div className="mt-1 min-w-[24px]">
-                <Clock className="w-6 h-6 text-red-400" />
+                <Frown className="w-8 h-8 text-red-400 group-hover:scale-110 transition-transform" />
               </div>
-              <p className="text-gray-700 font-medium leading-snug">
-                <span className="font-bold text-gray-900 block mb-1">Horas Perdidas:</span>
-                Garimpar imagens no Google que nunca combinam entre si.
-              </p>
-            </li>
-            <li className="flex gap-4 items-start">
+              <div>
+                <h3 className="font-bold text-gray-900 text-lg mb-2">Frustrada com o Canva?</h3>
+                <p className="text-gray-600 leading-relaxed text-sm">
+                  "Tentei fazer sozinha, mas perdi 3 horas e a arte ficou com cara de amadora. Queria algo bonito de verdade."
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Question 3 */}
+          <div className="bg-white p-8 rounded-2xl shadow-sm border border-red-100/50 hover:border-red-200 transition-colors group">
+            <div className="flex gap-4">
               <div className="mt-1 min-w-[24px]">
-                <DollarSign className="w-6 h-6 text-red-400" />
+                <DollarSign className="w-8 h-8 text-red-400 group-hover:scale-110 transition-transform" />
               </div>
-              <p className="text-gray-700 font-medium leading-snug">
-                <span className="font-bold text-gray-900 block mb-1">Preço Alto:</span>
-                Pagar designer ou comprar itens personalizados prontos custa uma fortuna.
-              </p>
-            </li>
-          </ul>
+              <div>
+                <h3 className="font-bold text-gray-900 text-lg mb-2">Dinheiro curto?</h3>
+                <p className="text-gray-600 leading-relaxed text-sm">
+                  "Pagar R$ 100,00 ou mais por um kit personalizado está fora de cogitação. Preciso economizar."
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Question 4 */}
+          <div className="bg-white p-8 rounded-2xl shadow-sm border border-red-100/50 hover:border-red-200 transition-colors group">
+            <div className="flex gap-4">
+              <div className="mt-1 min-w-[24px]">
+                <Clock className="w-8 h-8 text-red-400 group-hover:scale-110 transition-transform" />
+              </div>
+              <div>
+                <h3 className="font-bold text-gray-900 text-lg mb-2">Urgência batendo?</h3>
+                <p className="text-gray-600 leading-relaxed text-sm">
+                  "As aulas começam logo e eu ainda não fiz nada. Preciso de uma solução pra ONTEM."
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Agitation Block */}
+        <div className="mt-12 text-center max-w-2xl mx-auto bg-red-50 p-8 rounded-2xl border border-red-100">
+          <p className="text-red-900 font-bold text-xl leading-snug">
+            Você não precisa passar por esse estresse todo ano. <br />
+            <span className="font-normal text-red-800 text-base mt-2 block">Existe um jeito mais inteligente (e barato) de resolver isso.</span>
+          </p>
         </div>
 
       </div>

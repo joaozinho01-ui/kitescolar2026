@@ -47,23 +47,32 @@ const BonusSection = () => {
 
                 <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto mb-16">
                     {bonuses.map((bonus, index) => (
-                        <div key={index} className="bg-white rounded-2xl p-6 shadow-md border border-purple-100 hover:shadow-xl transition-all duration-300 flex flex-col md:flex-row gap-6 items-center">
+                        <div key={index} className="bg-white rounded-2xl p-6 shadow-md border border-purple-100 hover:shadow-xl transition-all duration-300 flex flex-col md:flex-row gap-6 items-center relative overflow-hidden group">
+
+                            {/* Value Tag */}
+                            <div className="absolute top-4 right-4 bg-gray-100 text-gray-500 text-xs font-bold px-3 py-1 rounded-md">
+                                Valor Real: <span className="line-through">R$ 47,00</span>
+                            </div>
+
                             <div className="w-full md:w-1/3 aspect-square rounded-xl overflow-hidden bg-gray-100 shrink-0">
                                 <img
                                     src={bonus.image}
                                     alt={bonus.title}
-                                    className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
+                                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                                 />
                             </div>
-                            <div className="flex-1 text-center md:text-left">
+                            <div className="flex-1 text-center md:text-left pt-6 md:pt-0">
                                 <span className="inline-block bg-gradient-to-r from-orange-400 to-pink-500 text-white text-[10px] font-bold px-2 py-1 rounded-full uppercase tracking-wider mb-3">
                                     {bonus.tag}
                                 </span>
                                 <h3 className="text-xl font-bold text-gray-900 mb-2">
                                     {bonus.title}
                                 </h3>
-                                <p className="text-gray-600 leading-relaxed">
+                                <p className="text-gray-600 leading-relaxed text-sm mb-4">
                                     {bonus.description}
+                                </p>
+                                <p className="text-green-600 font-bold text-sm bg-green-50 inline-block px-3 py-1 rounded-lg">
+                                    Hoje: Grátis
                                 </p>
                             </div>
                         </div>

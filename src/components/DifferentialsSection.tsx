@@ -1,4 +1,4 @@
-import { Zap, LayoutGrid, CalendarRange, PenTool, Clock, ShieldCheck } from 'lucide-react';
+import { Zap, LayoutGrid, CalendarRange, PenTool, Clock, ShieldCheck, CheckCircle2 } from 'lucide-react';
 
 const differentials = [
   {
@@ -43,26 +43,72 @@ const DifferentialsSection = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
           <span className="inline-block bg-white/10 px-4 py-2 rounded-full text-sm font-bold mb-4 backdrop-blur-sm">
-            🚀 O Segredo do Kit
+            🚀 Conheça o "Acervo Inteligente"
           </span>
-          <h2 className="text-3xl md:text-5xl font-extrabold mb-6">
-            Por que o Kit Escolar Premium <br />
-            <span className="text-yellow-400">é diferente de tudo?</span>
+          <h2 className="text-3xl md:text-5xl font-extrabold mb-6 leading-tight">
+            Por que designers cobram R$ 200, <br />
+            mas você paga <span className="text-yellow-400">menos de R$ 20?</span>
           </h2>
+          <p className="text-indigo-200 max-w-2xl mx-auto text-lg">
+            O segredo não é mágica. É o nosso método de produção em escala que entrega qualidade profissional por centavos.
+          </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {differentials.map((item, index) => (
-            <div key={index} className="bg-indigo-800/50 p-8 rounded-2xl border border-indigo-700/50 hover:bg-indigo-800 transition-colors">
-              <div className="w-12 h-12 bg-indigo-600 rounded-lg flex items-center justify-center mb-6 text-white shadow-lg shadow-indigo-900/50">
-                <item.icon className="w-6 h-6" />
-              </div>
-              <h3 className="text-xl font-bold mb-3">{item.title}</h3>
-              <p className="text-indigo-200 leading-relaxed text-sm">
-                {item.desc}
-              </p>
+        <div className="grid md:grid-cols-3 gap-8 items-center">
+          {/* Card 1: The Old Way */}
+          <div className="bg-indigo-950/50 p-8 rounded-2xl border border-indigo-800 opacity-70 scale-95">
+            <div className="text-indigo-400 font-bold uppercase text-xs mb-2 tracking-widest">O Jeito Tradicional</div>
+            <h3 className="text-xl font-bold mb-4 text-white">Contratar Designer</h3>
+            <ul className="space-y-3 text-sm text-indigo-200">
+              <li className="flex gap-2"><span className="text-red-400">×</span> Caro (R$ 50/arte)</li>
+              <li className="flex gap-2"><span className="text-red-400">×</span> Demora dias</li>
+              <li className="flex gap-2"><span className="text-red-400">×</span> Difícil pedir alteração</li>
+            </ul>
+          </div>
+
+          {/* Card 2: The New Way (Hero) */}
+          <div className="bg-white text-indigo-950 p-8 rounded-2xl border-2 border-yellow-400 shadow-[0_0_40px_rgba(250,204,21,0.2)] md:-mt-8 md:mb-8 relative z-10">
+            <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-yellow-400 text-indigo-900 font-bold px-4 py-1 rounded-full text-xs uppercase whitespace-nowrap">
+              A Solução Kit Premium
             </div>
-          ))}
+            <h3 className="text-2xl font-extrabold mb-4">Acervo Inteligente 2026</h3>
+            <p className="mb-6 text-sm font-medium">Nosso time de designers cria TUDO antecipadamente. Você só entra, escolhe e personaliza.</p>
+            <ul className="space-y-3 font-semibold">
+              <li className="flex gap-2 items-center"><CheckCircle2 className="w-5 h-5 text-green-500" /> Preço de "banana"</li>
+              <li className="flex gap-2 items-center"><CheckCircle2 className="w-5 h-5 text-green-500" /> Pronto na hora</li>
+              <li className="flex gap-2 items-center"><CheckCircle2 className="w-5 h-5 text-green-500" /> Qualidade de agência</li>
+            </ul>
+          </div>
+
+          {/* Card 3: The Bad Way */}
+          <div className="bg-indigo-950/50 p-8 rounded-2xl border border-indigo-800 opacity-70 scale-95">
+            <div className="text-indigo-400 font-bold uppercase text-xs mb-2 tracking-widest">O Jeito Amador</div>
+            <h3 className="text-xl font-bold mb-4 text-white">Fazer Sozinha</h3>
+            <ul className="space-y-3 text-sm text-indigo-200">
+              <li className="flex gap-2"><span className="text-red-400">×</span> Estresse mental</li>
+              <li className="flex gap-2"><span className="text-red-400">×</span> Resultado "caseiro"</li>
+              <li className="flex gap-2"><span className="text-red-400">×</span> Perda de tempo</li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+          <div className="p-4 bg-white/5 rounded-xl backdrop-blur-sm border border-white/10">
+            <LayoutGrid className="w-8 h-8 text-yellow-400 mx-auto mb-2" />
+            <div className="font-bold">100% Organizado</div>
+          </div>
+          <div className="p-4 bg-white/5 rounded-xl backdrop-blur-sm border border-white/10">
+            <CalendarRange className="w-8 h-8 text-yellow-400 mx-auto mb-2" />
+            <div className="font-bold">Atualizado 2026</div>
+          </div>
+          <div className="p-4 bg-white/5 rounded-xl backdrop-blur-sm border border-white/10">
+            <PenTool className="w-8 h-8 text-yellow-400 mx-auto mb-2" />
+            <div className="font-bold">Editável Canva</div>
+          </div>
+          <div className="p-4 bg-white/5 rounded-xl backdrop-blur-sm border border-white/10">
+            <ShieldCheck className="w-8 h-8 text-yellow-400 mx-auto mb-2" />
+            <div className="font-bold">Garantido</div>
+          </div>
         </div>
 
       </div>

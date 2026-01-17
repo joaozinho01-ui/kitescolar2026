@@ -35,28 +35,36 @@ const benefits = [
 
 const BenefitsSection = () => {
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-20 bg-white">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <span className="text-indigo-600 font-bold tracking-wide uppercase text-sm">
-            Por que todo mundo ama?
+
+        {/* Future Pacing Block */}
+        <div className="mb-20 bg-blue-50 rounded-[3rem] p-8 md:p-16 text-center border border-blue-100 relative overflow-hidden">
+          <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-blue-100/40 via-transparent to-transparent"></div>
+
+          <span className="relative z-10 inline-block bg-blue-600 text-white px-4 py-1.5 rounded-full text-sm font-bold mb-6 shadow-lg shadow-blue-200">
+            ✨ Visualize sua rotina
           </span>
-          <h2 className="text-3xl md:text-5xl font-extrabold text-gray-900 mt-2">
-            A ferramenta que faltava na sua rotina
+          <h2 className="relative z-10 text-3xl md:text-5xl font-extrabold text-indigo-950 mb-6 leading-tight">
+            Imagine começar as aulas com <br />
+            <span className="text-blue-600">tudo pronto e organizado...</span>
           </h2>
+          <p className="relative z-10 text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            Você tranquila no sofá, vendo a mochila do seu filho impecável, com cadernos etiquetados, materiais personalizados e aquele sentimento delicioso de <strong>"missão cumprida"</strong> — sem ter gastado rios de dinheiro ou perdido noites em claro.
+          </p>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {benefits.map((item, index) => (
-            <div key={index} className="flex gap-4 p-6 bg-white rounded-2xl shadow-sm hover:shadow-md transition-shadow border border-gray-100">
+            <div key={index} className="flex gap-4 p-8 bg-gray-50 rounded-2xl border border-gray-100 hover:border-blue-200 hover:shadow-lg transition-all duration-300 group">
               <div className="flex-shrink-0">
-                <div className="w-12 h-12 bg-indigo-100 rounded-xl flex items-center justify-center text-indigo-600">
-                  <item.icon className="w-6 h-6" />
+                <div className="w-14 h-14 bg-white rounded-2xl flex items-center justify-center text-indigo-600 shadow-sm group-hover:scale-110 transition-transform duration-300 border border-indigo-50">
+                  <item.icon className="w-7 h-7" />
                 </div>
               </div>
               <div>
-                <h3 className="text-lg font-bold text-gray-900 mb-2">{item.title}</h3>
-                <p className="text-gray-600 text-sm leading-relaxed">
+                <h3 className="text-xl font-bold text-gray-900 mb-2">{item.title}</h3>
+                <p className="text-gray-600 text-sm leading-relaxed font-medium">
                   {item.desc}
                 </p>
               </div>

@@ -1,10 +1,11 @@
 import { Gift, ArrowRight } from 'lucide-react';
+import bonus1 from '@/assets/bonus.webp';
 
 const bonuses = [
     {
         title: "Pack Extra de Etiquetas",
         description: "Modelos variados para diferenciar seus produtos e encantar clientes.",
-        image: "https://etiquetaspersonalizaveis.com/assets/bonus-1-etiquetas-CxQfh3Zo.webp",
+        image: bonus1,
         tag: "Exclusivo Premium"
     },
     {

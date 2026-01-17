@@ -25,7 +25,7 @@ const HeroSection = () => {
           <div className="text-center lg:text-left">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-primary-foreground leading-tight mb-4 tracking-tight">
               Volta às aulas <br className="hidden lg:block" />
-              <span className="text-yellow-400 underline decoration-wavy decoration-2 underline-offset-4">sem estresse e gastando pouco.</span>
+              <span className="text-yellow-400">sem estresse e gastando pouco.</span>
             </h1>
 
             {/* Mobile Image (Visible only on mobile/tablet) */}

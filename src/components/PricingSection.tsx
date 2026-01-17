@@ -82,7 +82,7 @@ const PricingSection = () => {
             {/* Selo flutuante */}
             <div className="absolute -top-5 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-orange-500 to-yellow-500 text-white px-6 py-2 rounded-full font-bold text-sm uppercase tracking-wide shadow-lg flex items-center gap-2 whitespace-nowrap animate-pulse">
               <Star className="w-4 h-4 fill-white" />
-              MÃES RECOMENDAM
+              MAIS VENDIDO
             </div>
 
             <div className="text-center mb-6 mt-4">

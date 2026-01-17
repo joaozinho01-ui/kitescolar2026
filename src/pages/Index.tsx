@@ -4,10 +4,10 @@ import HeroSection from '@/components/HeroSection';
 
 // Lazy load below-the-fold content to improve initial load time
 const TargetAudienceSection = lazy(() => import('@/components/TargetAudienceSection'));
-const SolutionSection = lazy(() => import('@/components/SolutionSection'));
+
 const ProductSection = lazy(() => import('@/components/ProductSection'));
 
-const BenefitsSection = lazy(() => import('@/components/BenefitsSection'));
+const DeliverablesSection = lazy(() => import('@/components/DeliverablesSection'));
 const TestimonialsSection = lazy(() => import('@/components/TestimonialsSection'));
 const PricingSection = lazy(() => import('@/components/PricingSection'));
 const GuaranteeSection = lazy(() => import('@/components/GuaranteeSection'));
@@ -28,17 +28,16 @@ const Index = () => {
         <TargetAudienceSection />
       </Suspense>
 
-      <Suspense fallback={<div className="h-screen bg-gray-50" />}>
-        {/* 3. Visão de Solução */}
-        <SolutionSection />
 
+
+      <Suspense fallback={<div className="h-screen bg-gray-50" />}>
         {/* 4. Apresentação da Oferta */}
         <ProductSection />
 
 
 
-        {/* 6. Benefícios + Recursos */}
-        <BenefitsSection />
+        {/* 6. Entregas (Novo) */}
+        <DeliverablesSection />
 
         {/* 7. Prova Social */}
         <TestimonialsSection />
@@ -61,7 +60,7 @@ const Index = () => {
         {/* Sticky CTA */}
         <StickyCTA />
       </Suspense>
-    </main>
+    </main >
   );
 };
 

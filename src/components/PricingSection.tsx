@@ -16,9 +16,6 @@ const PricingSection = () => {
       <div className="container mx-auto px-4 relative z-10">
 
         <div className="text-center mb-12">
-          <span className="inline-block bg-orange-100 text-orange-700 px-4 py-2 rounded-full text-sm font-bold mb-4">
-            🔥 Oportunidade Única
-          </span>
           <h2 className="text-3xl md:text-5xl font-extrabold text-indigo-950 mb-6">
             Qual a melhor opção para você?
           </h2>

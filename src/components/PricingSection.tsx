@@ -17,11 +17,25 @@ const PricingSection = () => {
 
         <div className="text-center mb-12">
           <span className="inline-block bg-orange-100 text-orange-700 px-4 py-2 rounded-full text-sm font-bold mb-4">
-            🔥 Oferta por tempo limitado
+            🔥 Oportunidade Única
           </span>
-          <h2 className="text-3xl md:text-5xl font-extrabold text-indigo-950 mb-4">
-            Escolha sua tranquilidade
+          <h2 className="text-3xl md:text-5xl font-extrabold text-indigo-950 mb-6">
+            Qual a melhor opção para você?
           </h2>
+
+          <div className="bg-blue-50/80 border border-blue-100 rounded-2xl p-6 max-w-2xl mx-auto text-left md:text-center mt-6">
+            <p className="font-bold text-gray-800 mb-3 text-lg">Entenda a diferença:</p>
+            <ul className="text-gray-700 space-y-2 inline-block text-left">
+              <li className="flex items-start gap-2">
+                <span className="text-blue-500 font-bold">•</span>
+                <span>O <strong>Kit Básico</strong> é a porta de entrada para conhecer o material.</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-blue-500 font-bold">•</span>
+                <span>O <strong>Kit Completo</strong> é a solução definitiva para quem valoriza tempo e praticidade.</span>
+              </li>
+            </ul>
+          </div>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-8 max-w-5xl mx-auto items-end">
@@ -31,33 +45,33 @@ const PricingSection = () => {
 
             <div className="text-center mb-4">
               <h3 className="text-xl font-bold text-gray-600 mb-1">
-                Opção Econômica
+                Kit Inicial Básico
               </h3>
               <p className="text-gray-400 text-xs">
-                Apenas arquivos básicos
+                Ideal para uma primeira experiência com o material.
               </p>
             </div>
 
             <ul className="space-y-3 mb-6 flex-grow">
               <li className="flex items-center gap-3 text-gray-600 text-sm">
                 <Check className="w-4 h-4 text-blue-500 flex-shrink-0" />
-                <span>Artes escolares básicas</span>
+                <span>Arquivos essenciais para começar</span>
               </li>
               <li className="flex items-center gap-3 text-gray-600 text-sm">
                 <Check className="w-4 h-4 text-blue-500 flex-shrink-0" />
-                <span>Edição no Canva</span>
+                <span>Acesso à edição no Canva</span>
               </li>
               <li className="flex items-center gap-3 text-gray-300 text-sm">
                 <X className="w-4 h-4 flex-shrink-0" />
-                <span className="line-through">Sem bônus exclusivos</span>
+                <span className="line-through">Recursos avançados limitados</span>
               </li>
               <li className="flex items-center gap-3 text-gray-300 text-sm">
                 <X className="w-4 h-4 flex-shrink-0" />
-                <span className="line-through">Sem uso comercial</span>
+                <span className="line-through">Sem licença comercial</span>
               </li>
               <li className="flex items-center gap-3 text-gray-300 text-sm">
                 <X className="w-4 h-4 flex-shrink-0" />
-                <span className="line-through">Sem atualizações</span>
+                <span className="line-through">Sem pacote de bônus</span>
               </li>
             </ul>
 
@@ -71,8 +85,12 @@ const PricingSection = () => {
                 onClick={() => setIsUpsellOpen(true)}
                 className="block w-full bg-white hover:bg-gray-50 text-gray-500 font-medium py-3 rounded-xl text-sm transition-colors border-2 border-gray-200"
               >
-                Quero o básico (limitado)
+                Quero conhecer o Básico
               </button>
+
+              <p className="text-[10px] text-gray-400 mt-3 px-2 leading-tight">
+                Opção simplificada para teste rápido.
+              </p>
             </div>
           </div>
 
@@ -82,34 +100,34 @@ const PricingSection = () => {
             {/* Selo flutuante */}
             <div className="absolute -top-5 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-orange-500 to-yellow-500 text-white px-6 py-2 rounded-full font-bold text-sm uppercase tracking-wide shadow-lg flex items-center gap-2 whitespace-nowrap animate-pulse">
               <Star className="w-4 h-4 fill-white" />
-              MAIS VENDIDO
+              MAIS ESCOLHIDO
             </div>
 
             <div className="text-center mb-6 mt-4">
               <h3 className="text-3xl font-extrabold text-indigo-950 leading-tight mb-2">
-                Kit Completo <span className="text-orange-500">2026</span>
+                Kit Escolar Completo <span className="text-orange-500">2026</span>
               </h3>
-              <p className="text-gray-600 font-medium text-sm">
-                A solução definitiva para zerar a lista escolar
+              <p className="text-gray-600 font-medium text-sm leading-relaxed px-2">
+                A maioria dos professores e pais escolhe esta opção porque ela entrega tudo pronto, evita retrabalho e oferece o melhor custo-benefício.
               </p>
             </div>
 
             <ul className="space-y-4 mb-8 px-2">
               <li className="flex items-center gap-3 text-gray-800 font-bold text-base">
                 <div className="bg-green-100 p-1 rounded-full"><Check className="w-4 h-4 text-green-600 flex-shrink-0" /></div>
-                <span>+500 temas editáveis</span>
+                <span>Mais completo: +500 recursos prontos</span>
               </li>
               <li className="flex items-center gap-3 text-gray-800 font-bold text-base">
                 <div className="bg-green-100 p-1 rounded-full"><Check className="w-4 h-4 text-green-600 flex-shrink-0" /></div>
-                <span>Tudo do básico + centenas de artes</span>
+                <span>Mais prático: Tudo organizado por temas</span>
               </li>
               <li className="flex items-center gap-3 text-gray-800 font-bold text-base">
                 <div className="bg-green-100 p-1 rounded-full"><Check className="w-4 h-4 text-green-600 flex-shrink-0" /></div>
-                <span>Uso <strong>comercial liberado</strong> (lucre muito)</span>
+                <span>Mais vantajoso: Uso comercial e vitalício</span>
               </li>
               <li className="flex items-center gap-3 text-gray-800 font-bold text-base">
                 <div className="bg-green-100 p-1 rounded-full"><Check className="w-4 h-4 text-green-600 flex-shrink-0" /></div>
-                <span>Acesso Vitalício + Atualizações</span>
+                <span>Sem preocupações: Atualizações inclusas</span>
               </li>
             </ul>
 
@@ -117,7 +135,7 @@ const PricingSection = () => {
             <div className="bg-orange-50 rounded-xl p-5 border border-orange-100 mb-8">
               <div className="flex items-center gap-2 mb-3 text-orange-700 font-bold uppercase tracking-wide text-xs">
                 <Gift className="w-4 h-4" />
-                Leve também hoje (Grátis):
+                Presentes inclusos nesta versão:
               </div>
               <ul className="space-y-2 text-sm text-gray-700 font-medium">
                 <li className="flex items-start gap-2">
@@ -145,14 +163,10 @@ const PricingSection = () => {
                 href="https://www.ggcheckout.com/checkout/v2/L1BtkHLS5kLwGB6hCWp7"
                 className="flex flex-col items-center justify-center w-full bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white py-4 rounded-xl shadow-lg shadow-orange-500/30 transition-all hover:scale-[1.02] mb-4"
               >
-                <span className="font-bold text-xl">GARANTIR TUDO AGORA</span>
-                <span className="text-xs opacity-90 font-normal">Resolva sua vida por R$ 19,90</span>
+                <span className="font-bold text-xl">Fazer a escolha inteligente</span>
+                <span className="text-xs opacity-90 font-normal">Garanta o pacote completo agora</span>
               </a>
 
-              <div className="flex justify-center gap-4 text-[10px] text-gray-400 font-medium uppercase tracking-wider">
-                <span className="flex items-center gap-1"><Zap className="w-3 h-3" /> Entrega Imediata</span>
-                <span className="flex items-center gap-1"><Shield className="w-3 h-3" /> Compra Segura</span>
-              </div>
             </div>
           </div>
 

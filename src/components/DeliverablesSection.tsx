@@ -23,6 +23,8 @@ const DeliverablesSection = () => {
                         <img
                             src="https://i.postimg.cc/J4pHfVpT/Captura-de-tela-2026-01-16-235710.png"
                             alt="Preview do Kit"
+                            loading="lazy"
+                            decoding="async"
                             className="w-full max-w-2xl h-auto rounded-xl shadow-lg border border-gray-100"
                         />
                     </div>

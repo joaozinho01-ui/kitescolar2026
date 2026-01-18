@@ -55,7 +55,7 @@ const TestimonialsSection = () => {
               <p className="text-gray-700 italic mb-6 flex-grow">"{t.content}"</p>
 
               <div className="flex items-center gap-4 mt-auto">
-                <img src={t.image} alt={t.name} className="w-12 h-12 rounded-full object-cover border-2 border-white shadow-sm" />
+                <img src={t.image} alt={t.name} loading="lazy" decoding="async" className="w-12 h-12 rounded-full object-cover border-2 border-white shadow-sm" />
                 <div>
                   <p className="font-bold text-gray-900 text-sm">{t.name}</p>
                   <p className="text-xs text-indigo-600 font-medium">{t.role}</p>

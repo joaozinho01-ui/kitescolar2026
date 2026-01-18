@@ -43,7 +43,7 @@ const ProductSection = () => {
           <div className="flex justify-center flex-wrap gap-4 mb-8">
             {temas.map((tema, index) => (
               <div key={index} className="w-32 h-32 md:w-48 md:h-48 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all hover:scale-105 border-2 border-white">
-                <img src={tema.img} alt={tema.name} className="w-full h-full object-cover" />
+                <img src={tema.img} alt={tema.name} loading="lazy" decoding="async" className="w-full h-full object-cover" />
               </div>
             ))}
           </div>

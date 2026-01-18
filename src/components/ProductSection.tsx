@@ -28,9 +28,7 @@ const ProductSection = () => {
 
         {/* Intro */}
         <div className="text-center mb-16">
-          <span className="inline-block bg-indigo-100 text-indigo-700 px-4 py-2 rounded-full text-sm font-bold mb-4">
-            📦 O que você vai receber?
-          </span>
+
           <h2 className="text-3xl md:text-5xl font-extrabold text-gray-900 mb-6">
             Apresentamos o <br />
             <span className="text-indigo-600">Kit Escolar Premium 2026</span>

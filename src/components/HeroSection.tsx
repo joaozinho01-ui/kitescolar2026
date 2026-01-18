@@ -47,10 +47,7 @@ const HeroSection = () => {
 
             {/* Micro-triggers - Simplified */}
             <div className="flex flex-wrap justify-center lg:justify-start gap-4 mb-8 text-primary-foreground/90 font-medium text-sm">
-              <div className="flex items-center gap-1.5 bg-indigo-900/30 px-3 py-1.5 rounded-full border border-indigo-500/30">
-                <CheckCircle2 className="w-4 h-4 text-green-400" />
-                Zero esforço técnico
-              </div>
+
               <div className="flex items-center gap-1.5 bg-indigo-900/30 px-3 py-1.5 rounded-full border border-indigo-500/30">
                 <Download className="w-4 h-4 text-green-400" />
                 Baixe e edite agora
